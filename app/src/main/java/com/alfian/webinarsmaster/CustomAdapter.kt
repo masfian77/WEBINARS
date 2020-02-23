@@ -8,9 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import java.util.ArrayList
 
-class CustomAdapter(private val context: Context, private val userModelArrayList: ArrayList<UserModel>) :
-    BaseAdapter() {
-
+class CustomAdapter(private val context: Context, private val userModelArrayList: ArrayList<UserModel>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return userModelArrayList.size
@@ -25,6 +23,7 @@ class CustomAdapter(private val context: Context, private val userModelArrayList
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+
         var convertView = convertView
         val holder: ViewHolder
 
@@ -40,7 +39,6 @@ class CustomAdapter(private val context: Context, private val userModelArrayList
 
             convertView.tag = holder
         } else {
-            // the getTag returns the viewHolder object set as a tag to the view
             holder = convertView.tag as ViewHolder
         }
 

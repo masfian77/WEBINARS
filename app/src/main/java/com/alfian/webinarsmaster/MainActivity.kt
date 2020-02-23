@@ -32,11 +32,9 @@ class MainActivity : AppCompatActivity() {
             edtHobby!!.setText("")
             Toast.makeText(this@MainActivity, "Stored Successfully!", Toast.LENGTH_SHORT).show()
         }
-
         btnGetAll!!.setOnClickListener {
             val intent = Intent(this@MainActivity, GetAllUsersActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

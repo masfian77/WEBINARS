@@ -40,7 +40,6 @@ class UpdateDeleteActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
-
         btndelete!!.setOnClickListener {
             databaseHelper!!.deleteUSer(userModel!!.getIds())
             Toast.makeText(this@UpdateDeleteActivity, "Deleted Successfully!", Toast.LENGTH_SHORT).show()
@@ -48,6 +47,5 @@ class UpdateDeleteActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
-
     }
 }
